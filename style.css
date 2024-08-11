@@ -83,7 +83,7 @@
   
   .topnav {
     overflow: hidden;
-    background-color: #3ead6aa7;
+    background-color: #3fb26da7;
   }
   
   .topnav a {
@@ -132,3 +132,40 @@
     }
   }
   
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(203, 166, 85);
+    color: white;
+    text-align: center;
+  }
+
+  .column {
+    display: flex;
+    float: right;
+    width: 25%;
+    padding: 40px;
+  }
+
+  .column img {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .column img:hover {
+    opacity: 1;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  img {
+    border-radius: 20px;
+    width: 60%;
+    height: 50%;
+  }
