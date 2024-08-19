@@ -1,41 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1st project</title>
-    <link rel="stylesheet" href="samsungstyle.css">
 
-    
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Samsung Products Section</title>
+  <style>
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #93c3f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.samsung-products-section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  text-align: center;
+}
+
+.samsung-products-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.samsung-products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+.samsung-product-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.samsung-product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.samsung-product-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.samsung-product-card:hover .samsung-product-image img {
+  transform: scale(1.1);
+}
+
+.samsung-product-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.samsung-product-info h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.samsung-product-info p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.samsung-product-info button {
+  padding: 10px 20px;
+  background-color: #1428a0;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.samsung-product-info button:hover {
+  background-color: #0d1a80;
+}
+
+
+@media (max-width: 768px) {
+  .samsung-products-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .samsung-products-section h1 {
+    font-size: 2rem;
+  }
+
+  .samsung-product-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .samsung-product-info p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .samsung-products-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .samsung-products-section h1 {
+    font-size: 1.8rem;
+  }
+}
+
+  </style>
 </head>
+
 <body>
-    <section>
-        <div class="col">
-            <div class="imgbox" style="background-image: url(https://cdn.gadgetbytenepal.com/wp-content/uploads/2024/01/Samsung-Galaxy-S24-Ultra-Gallery-4.jpg);" >
-                <h3>Samsung S24 Ultra</h3>
-            </div>
-            <div class="imgbox"  style="background-image: url(https://cdn.dxomark.com/wp-content/uploads/medias/post-63759/samsung_galaxy_z-fold2-1.jpg);" >
-                <h3>Samsung A series</h3>
-            </div>
-            <div class="imgbox" style="background-image: url(https://images.samsung.com/is/image/samsung/assets/africa_en/refrigerators/bleed-column-display-wrong-size/Ref_pageTMF.jpg?$720_850_JPG$);" >
-                <h3>Samsung Fridge</h3>
-            </div>
-            <div class="imgbox" style="background-image: url(https://images.samsung.com/au/smartphones/galaxy-z-flip4/buy/Flip4_Carousel_ProductKV_PinkGold_MO.jpg);" >
-                <h3>Samsung Z-Fold</h3>
-            </div>
-            <div class="imgbox" style="background-image: url(https://images.samsung.com/is/image/samsung/p6pim/levant/feature/164941353/levant-feature-embracing-the-essentials-539420853?$FB_TYPE_A_MO_JPG$);" >
-                <h3>Samsung Budget Phone</h3>
-            </div>
-            <div class="imgbox" style="background-image: url(https://img.etimg.com/photo/msid-98945112,imgsize-13860/SamsungGalaxyS23Ultra.jpg);" >
-                <h3>Samsung Galaxy</h3>
-            </div>
-            <div class="imgbox" style="background-image: url(https://images.samsung.com/ae/galaxy-watch5-pro/feature/galaxy-watch5-pro-battery-display-mo.png);" >
-                <h3>Galaxy Watch</h3>
-            </div>
+  <section class="samsung-products-section">
+    <h1>Samsung Products</h1>
+    <div class="samsung-products-container">
+  
+      <div class="samsung-product-card">
+        <div class="samsung-product-image">
+          <img src="https://via.placeholder.com/300x200/000000/FFFFFF?text=Samsung+Phone" alt="Samsung Phone">
         </div>
-        <script src="samsungscript.js"></script>
-    </section>
+        <div class="samsung-product-info">
+          <h3>Samsung Galaxy S23</h3>
+          <p>Rs 1,30,000</p>
+          <button>Buy Now</button>
+        </div>
+      </div>
+
+      <div class="samsung-product-card">
+        <div class="samsung-product-image">
+          <img src="https://via.placeholder.com/300x200/000000/FFFFFF?text=Samsung+TV" alt="Samsung TV">
+        </div>
+        <div class="samsung-product-info">
+          <h3>Samsung 4K TV</h3>
+          <p>Rs 69,999,99</p>
+          <button>Buy Now</button>
+        </div>
+      </div>
     
+      <div class="samsung-product-card">
+        <div class="samsung-product-image">
+          <img src="https://via.placeholder.com/300x200/000000/FFFFFF?text=Samsung+Tablet" alt="Samsung Tablet">
+        </div>
+        <div class="samsung-product-info">
+          <h3>Samsung Galaxy Tab S8</h3>
+          <p>Rs 49,999</p>
+          <button>Buy Now</button>
+        </div>
+      </div>
     
+      <div class="samsung-product-card">
+        <div class="samsung-product-image">
+          <img src="https://via.placeholder.com/300x200/000000/FFFFFF?text=Samsung+Watch" alt="Samsung Watch">
+        </div>
+        <div class="samsung-product-info">
+          <h3>Samsung Galaxy Watch 5</h3>
+          <p>Rs 85,000</p>
+          <button>Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
+
 </html>

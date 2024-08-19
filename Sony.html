@@ -1,182 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sony</title>
-    <style>
-       
-  #main {
-    transition: margin-left .5s;
-    padding: 16px;
-  }
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 18px;}
-  }
-  * {box-sizing: border-box;}
-  
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .topnav {
-    overflow: hidden;
-    background-color: #3fb26da7;
-  }
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sony Product Section</title>
+   <style>
+    /* Basic Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
 
-  
-  
-  
-  .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(203, 166, 85);
-    color: white;
-    text-align: center;
+body {
+  background: #93c3f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.sony-products-section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  text-align: center;
+}
+
+.sony-products-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.sony-products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Sony Product Card Styling */
+.sony-product-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sony-product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.sony-product-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.sony-product-card:hover .sony-product-image img {
+  transform: scale(1.1);
+}
+
+.sony-product-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.sony-product-info h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sony-product-info p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.sony-product-info button {
+  padding: 10px 20px;
+  background-color: #0000ff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.sony-product-info button:hover {
+  background-color: #000099;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .sony-products-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
-  .column {
-    display: flex;
-    float: right;
-    width: 25%;
-    padding: 40px;
+  .sony-products-section h1 {
+    font-size: 2rem;
   }
 
-  .column img {
-    opacity: 0.8;
-    cursor: pointer;
+  .sony-product-info h3 {
+    font-size: 1.3rem;
   }
 
-  .column img:hover {
-    opacity: 1;
+  .sony-product-info p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sony-products-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  .sony-products-section h1 {
+    font-size: 1.8rem;
   }
+}
 
-  img {
-    border-radius: 20px;
-    width: 60%;
-    height: 50%;
-  }
- h1{
-    background-color: yellowgreen;
- }
-    </style>
+   </style>
 </head>
+
 <body>
-    <header>
-        <h1>Sony</h1>
-    </header>
-          
-    </div>
-    <div style="text-align: center">
-      <p>Click on the images for more detsils!!</p>
-    </div>
+  <section class="sony-products-section">
+    <h1>Sony Products</h1>
+    <div class="sony-products-container">
     
-    <div class="row">
-      <div class="column">
-        <a href="addidas.html"></a>
-        <img
-          src="https://www.neostore.com.np/assets/uploads/watchzz_3.jpg"
-          alt="ok"
-          />
-      
+      <div class="sony-product-card">
+        <div class="sony-product-image">
+          <img src="https://via.placeholder.com/300x200/0000FF/FFFFFF?text=Sony+Headphones" alt="Sony Headphones">
+        </div>
+        <div class="sony-product-info">
+          <h3>Sony Headphones</h3>
+          <p>Rs90,000</p>
+          <button>Buy Now</button>
+        </div>
       </div>
-      <div class="column">
-        <img
-          src="https://www.neostore.com.np/assets/uploads/g16_32.jpg"
-          alt="ok"
-        />
+     
+      <div class="sony-product-card">
+        <div class="sony-product-image">
+          <img src="https://via.placeholder.com/300x200/0000FF/FFFFFF?text=Sony+Camera" alt="Sony Camera">
+        </div>
+        <div class="sony-product-info">
+          <h3>Sony Camera</h3>
+          <p>Rs4,50,000</p>
+          <button>Buy Now</button>
+        </div>
       </div>
-      <div class="column">
-        <img
-          src="https://www.neostore.com.np/assets/uploads/cmf_1_3.jpg"
-          alt="ok"
-        />
-      </div>
-      <div class="column">
-        <img
-          src="https://www.neostore.com.np/assets/uploads/HL-L2370DN_2.jpg"
-          alt="ok"
-        />
-      </div>
-      <div class="column">
-        <img
-          src="https://www.neostore.com.np/assets/uploads/E2222H_3.jpg"
-        />
-      </div>
-      <div class="column">
-        <img
-          src="https://www.neostore.com.np/assets/uploads/hikvision.jpg"
-          alt="ok"
-        />
-      </div>
-      <div class="column">
-        <img
-          src="https://www.neostore.com.np/assets/uploads/w9_4.jpg"
-          alt="ok"
     
-        />
+      <div class="sony-product-card">
+        <div class="sony-product-image">
+          <img src="https://via.placeholder.com/300x200/0000FF/FFFFFF?text=Sony+TV" alt="Sony TV">
+        </div>
+        <div class="sony-product-info">
+          <h3>Sony 4K TV</h3>
+          <p>Rs7,50,000</p>
+          <button>Buy Now</button>
+        </div>
       </div>
-      <div class="column">
-        <img
-          src="https://www.neostore.com.np/assets/uploads/travel11.jpg"
-          alt="ok"
-        />
-      </div>
-      <div class="column">
-        <img
-          src="https://www.neostore.com.np/assets/uploads/7420_2.jpg"
-          alt="ok"
-        />
-      </div>
-      <div class="column">
-        <img
-          src="https://www.neostore.com.np/assets/uploads/flip_21.jpg"
-          alt="ok"
-        />
-      </div>
-      <div class="column">
-        <img
-          src="https://www.neostore.com.np/assets/uploads/nothing_2a_4.jpg"
-          alt="ok"
-        />
-      </div>
-      <div class="column">
-        <img
-          src="https://www.neostore.com.np/assets/uploads/workstation.jpg"
-          alt="ok"
-        />
+   
+      <div class="sony-product-card">
+        <div class="sony-product-image">
+          <img src="https://via.placeholder.com/300x200/0000FF/FFFFFF?text=Sony+PlayStation" alt="Sony PlayStation">
+        </div>
+        <div class="sony-product-info">
+          <h3>Sony PlayStation 5</h3>
+          <p>Rs10,00,000</p>
+          <button>Buy Now</button>
+        </div>
       </div>
     </div>
-    
-    <div class="footer">
-      <p>Social Media links</p>
-      <a href="https://www.facebook.com/"></a>
-    </div>
-    
-    <script>
-        function openNav() {
-          document.getElementById("mySidebar").style.width = "250px";
-          document.getElementById("main").style.marginLeft = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidebar").style.width = "0";
-          document.getElementById("main").style.marginLeft= "0";
-        }
-        </script>
-    
+  </section>
 </body>
+
 </html>

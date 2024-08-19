@@ -5,7 +5,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #8aebe1;
+    background: #3e7959;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -82,7 +82,7 @@
   
   .topnav {
     overflow: hidden;
-    background-color: #3fb26da7;
+    background: #93c3f2;
   }
   
   .topnav a {
@@ -176,7 +176,7 @@
 
   /* Basic Footer Styling */
 .footer {
-  background-color: #20342a;
+  background-color: #3e5768;
   color: white;
   padding: 20px 0;
 }

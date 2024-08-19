@@ -1,16 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple</title>
-    <style>
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Apple Products Section</title>
+  <style>
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #93c3f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.apple-products-section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  text-align: center;
+}
+
+.apple-products-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #000000;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.apple-products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+.apple-product-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.apple-product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.apple-product-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.apple-product-card:hover .apple-product-image img {
+  transform: scale(1.1);
+}
+
+.apple-product-info {
+  padding: 15px;
+  text-align: left;
+}
+
+.apple-product-info h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.apple-product-info p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.apple-product-info button {
+  padding: 10px 20px;
+  background-color: #0071e3;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.apple-product-info button:hover {
+  background-color: #005bb5;
+}
+
+
+@media (max-width: 768px) {
+  .apple-products-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .apple-products-section h1 {
+    font-size: 2rem;
+  }
+
+  .apple-product-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .apple-product-info p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .apple-products-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .apple-products-section h1 {
+    font-size: 1.8rem;
+  }
+}
+
+  </style>
 </head>
+
 <body>
+  <section class="apple-products-section">
+    <h1>Apple Products</h1>
+    <div class="apple-products-container">
     
-
-
+      <div class="apple-product-card">
+        <div class="apple-product-image">
+          <img src="https://reboxed.co/cdn/shop/articles/ip15pm_header_800x.jpg?v=1705077309" alt="Apple iPhone">
+        </div>
+        <div class="apple-product-info">
+          <h3>Apple iPhone 15ProMax</h3>
+          <p>Rs 2,89,000</p>
+          <button>Buy Now</button>
+        </div>
+      </div>
+     
+      <div class="apple-product-card">
+        <div class="apple-product-image">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZ6Kg3xp7kMDdhHBC59JWP3sFPEUfZseY9aJJX--NVibsO0FRQ8_in7Ab0Q0iFZnooJwI&usqp=CAU" alt="Apple MacBook">
+        </div>
+        <div class="apple-product-info">
+          <h3>Apple MacBook Air2</h3>
+          <p>Rs 1,90,000</p>
+          <button>Buy Now</button>
+        </div>
+      </div>
+     
+      <div class="apple-product-card">
+        <div class="apple-product-image">
+          <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ultra-band-unselect-gallery-1-202309_FMT_WHH?wid=752&hei=720&fmt=p-jpg&qlt=80&.v=1693544486108" alt="Apple Watch">
+        </div>
+        <div class="apple-product-info">
+          <h3>Apple Watch Ultra2</h3>
+          <p>Rs1,49,000</p>
+          <button>Buy Now</button>
+        </div>
+      </div>
+    
+      <div class="apple-product-card">
+        <div class="apple-product-image">
+          <img src="https://static0.pocketlintimages.com/wordpress/wp-content/uploads/2023/09/airpods-pro-2nd-gen-usb-c-main-image-1.jpg" alt="Apple AirPods">
+        </div>
+        <div class="apple-product-info">
+          <h3>Apple AirPods Pro</h3>
+          <p>Rs 69,000</p>
+          <button>Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
+
 </html>
