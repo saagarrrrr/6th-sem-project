@@ -5,26 +5,6 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<style>
-    input[type=text] {
-  width: 130px;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 20px;
-  font-size: 16px;
-  background-color: white;
-  background-image: url('searchicon.png');
-  background-position: 10px 10px; 
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 10px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
-}
-
-input[type=text]:focus {
-  width: 30%;
-}
-</style>
 <div class="topnav">
     <div id="mySidebar" class="sidebar">
         <a href="#" class="closebtn" onclick="closeNav()">×</a>
@@ -41,7 +21,7 @@ input[type=text]:focus {
       </div>    
   <a class="active" href="#home">Home</a>
   <a href="about us .html">About</a>
-  <a href="register.html">Sign In</a>
+  <a href="log in.html">Log in</a>
   <a href="mycart.html">My Cart</a>
 <form>
   <input type="text" name="search" placeholder="Search..">
@@ -128,11 +108,38 @@ input[type=text]:focus {
   </div>
 </div>
 
-<div class="footer">
-  <p>Social Media links</p>
-  <a href="https://www.facebook.com/"></a>
-</div>
-
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Contact Info -->
+    <div class="footer-section contact-info">
+      <h2>Contact Us</h2>
+      <p><i class="phone"></i>+977-9800000000</p>
+      <p><i class="fas fa-envelope"></i> info@techstore.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Bharatpur-Chitwan,Nepal</p>
+    </div>
+    <!-- Quick Links -->
+    <div class="footer-section quick-links">
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="productsection.html">Products</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section social-media">
+      <h2>Follow Us</h2>
+      <a href="https://www.facebook.com/"><i class="facebook"></i> Facebook</a>
+      <a href="https://web.whatsapp.com/"><i class="whatsapp"></i> Whatsapp</a>
+      <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="instagram"></i> Instagram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 Tech Store | All rights reserved</p>
+  </div>
+</footer>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 <script>
     function openNav() {
       document.getElementById("mySidebar").style.width = "250px";
