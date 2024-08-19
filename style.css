@@ -11,20 +11,19 @@
     padding-top: 60px;
   }
   .btn-group button {
-    background-color: #04AA6D; /* Green background */
-    border: 1px solid green; /* Green border */
-    color: white; /* White text */
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    width: 50%; /* Set a width if needed */
-    display: block; /* Make the buttons appear below each other */
+    background-color: #04AA6D; 
+    border: 1px solid green;
+    color: white; 
+    cursor: pointer; 
+    width: 50%; 
+    display: block; 
   }
   
   .btn-group button:not(:last-child) {
-    border-bottom: none; /* Prevent double borders */
+    border-bottom: none;
   }
   
-  /* Add a background color on hover */
+  
   .btn-group button:hover {
     background-color: #3e8e41;
   }
@@ -69,7 +68,7 @@
     padding: 16px;
   }
   
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  
   @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
@@ -89,7 +88,7 @@
   .topnav a {
     float: right;
     display: block;
-    color: rgb(206, 17, 17);
+    color: rgb(16, 13, 13);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -103,7 +102,7 @@
   }
   
   .topnav a.active {
-    background-color: #a53636;
+    background-color: #10341b;
     color: white;
   }
   
@@ -114,6 +113,7 @@
     margin-right: 16px;
     border: none;
     font-size: 17px;
+    border-radius: 20px;
   }
   
   @media screen and (max-width: 600px) {
@@ -132,8 +132,10 @@
     }
   }
   
+
+  /* fotter....................... */
   .footer {
-    position: fixed;
+    position:static;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -169,3 +171,105 @@
     width: 60%;
     height: 50%;
   }
+
+
+
+  /* Basic Footer Styling */
+.footer {
+  background-color: #20342a;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 1rem;
+  margin: 5px 0;
+  text-decoration: none;
+  color: white;
+}
+
+.footer-section a:hover {
+  color: #ddd;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 10px 0;
+}
+
+.footer-section .social-media a {
+  display: block;
+  margin: 10px 0;
+}
+
+.footer-section .social-media a i {
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #555;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .footer-section h2 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .footer-section p,
+  .footer-section a {
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+}
