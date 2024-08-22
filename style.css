@@ -10,15 +10,20 @@
     transition: 0.5s;
     padding-top: 60px;
   }
-  .btn-group button {
+  /* .btn-group button {
     background-color: #04AA6D; 
     border: 1px solid green;
     color: white; 
     cursor: pointer; 
     width: 50%; 
     display: block; 
-  }
+  } */
   
+  .btn-group{
+    flex-direction: column;
+    display: flex;
+  }
+  .btn-group a
   .btn-group button:not(:last-child) {
     border-bottom: none;
   }
