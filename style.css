@@ -8,16 +8,23 @@
     background: #3e7959;
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 50px;
   }
-  /* .btn-group button {
-    background-color: #04AA6D; 
-    border: 1px solid green;
+
+
+
+   .btn-group button {
+    background-color: #ffffff; 
     color: white; 
     cursor: pointer; 
-    width: 50%; 
+    width: 10%; 
     display: block; 
-  } */
+    border-radius: 20px;
+  } 
+  
+
+
+
   
   .btn-group{
     flex-direction: column;
@@ -58,19 +65,27 @@
   .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #0c3c09;
+    background-color: #1b223b;
     color: white;
-    padding: 10px 15px;
-    border: none;
+    padding: 1px 2px;
+    border: 1px solid gold;
+
   }
   
   .openbtn:hover {
-    background-color: #444;
+    background-color: #5e4781;
   }
   
+  h2{
+    display: flex;
+    justify-content: center;
+   
+  }
+
+
   #main {
     transition: margin-left .5s;
-    padding: 16px;
+    padding: 15px;
   }
   
   

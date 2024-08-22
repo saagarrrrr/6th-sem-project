@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Tech Store</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #595d8e;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    background-color: rgb(189, 188, 214);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 1000px;
+    width: 90%;
+    overflow: hidden;
+}
+
+.content {
+    width: 60%;
+    padding-right: 20px;
+}
+
+.image-container {
+    width: 40%;
+    animation: slideIn 2s ease-in-out;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.heading {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.intro, .vision, .conclusion {
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.intro {
+    animation-delay: 0.5s;
+}
+
+.vision {
+    animation-delay: 1s;
+}
+
+.conclusion {
+    animation-delay: 1.5s;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="about-section">
+        <div class="content">
+            <h1 class="heading">About Us</h1>
+            <p class="intro">Welcome to Tech Store, your number one source for all things tech. We're dedicated to giving you the very best of electronics, with a focus on quality, customer service, and uniqueness.</p>
+            <p class="vision">Founded in 2023, Tech Store has come a long way from its beginnings in a home office. When we first started out, our passion for "cutting-edge gadgets" drove us to quit our day jobs so that Tech Store can offer you the world’s most advanced gadgets. We now serve customers all over the world and are thrilled that we're able to turn our passion into our website.</p>
+            <p class="conclusion">We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.</p>
+        </div>
+        <div class="image-container">
+            <img src="#" alt="Tech Store Logo">
+        </div>
+    </div>
+    <script>
+// Example: Animate content when scrolling into view (if needed)
+document.addEventListener('scroll', () => {
+    const elements = document.querySelectorAll('.intro, .vision, .conclusion');
+    elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (position < windowHeight - 100) {
+            el.classList.add('animated');
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

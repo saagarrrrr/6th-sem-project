@@ -62,6 +62,7 @@
         border: none;
         border-radius: 5px;
         transition: transform 0.3s ease, background-color 0.3s ease;
+        text-decoration: none;
       }
 
       .buy-now {
@@ -125,17 +126,13 @@
         </p>
         <h2>Rs1,48,000.00</h2>
         <div class="product-buttons">
-          <button class="btn buy-now">Buy Now</button>
+          <a href="paymentmethod.html" button class="btn buy-now">Buy Now</a>
           <button class="btn add-to-cart">Add to Cart</button>
         </div>
       </div>
     </div>
 
     <script>
-      document.querySelector(".buy-now").addEventListener("click", function () {
-        alert("You clicked Buy Now!");
-      });
-
       document
         .querySelector(".add-to-cart")
         .addEventListener("click", function () {

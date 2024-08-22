@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>brotherprinter</title>
+    <title>Macbook</title>
     <style>
       body {
         font-family: "Arial", sans-serif;
@@ -11,10 +11,10 @@
         padding: 0;
         background-color: #8d8ad4;
       }
-      h2{
+      h2 {
         color: rgb(0, 0, 0);
       }
-      h3{
+      h3 {
         color: #666;
         text-decoration: line-through;
       }
@@ -69,6 +69,7 @@
         border: none;
         border-radius: 5px;
         transition: transform 0.3s ease, background-color 0.3s ease;
+        text-decoration: none;
       }
 
       .buy-now {
@@ -127,24 +128,20 @@
           The Apple MacBook Pro 14.2", available at the best price in Nepal at
           Oliz Store, is a powerhouse laptop featuring a 10-core CPU and a
           16-core GPU, both driven by the advanced Apple M1 Pro 10-Core Chip. It
-          comes with 16GB of unified RAM and a spacious 1TB SSD. The 14.2" Liquid
-          Retina XDR display, with a resolution of 3024 x 1964, provides
+          comes with 16GB of unified RAM and a spacious 1TB SSD. The 14.2"
+          Liquid Retina XDR display, with a resolution of 3024 x 1964, provides
           exceptional visual clarity and color accuracy.
         </p>
         <h3>Rs470,000.00</h3>
         <h2>Rs270,000.00</h2>
         <div class="product-buttons">
-          <button class="btn buy-now">Buy Now</button>
+          <a href="paymentmethod.html" button class="btn buy-now">Buy Now</a>
           <button class="btn add-to-cart">Add to Cart</button>
         </div>
       </div>
     </div>
 
     <script>
-      document.querySelector(".buy-now").addEventListener("click", function () {
-        alert("You clicked Buy Now!");
-      });
-
       document
         .querySelector(".add-to-cart")
         .addEventListener("click", function () {
