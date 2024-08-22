@@ -125,6 +125,56 @@
       .checkout-btn:hover {
         background-color: #555;
       }
+      
+
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+}
+
+.footer-section p,
+.footer-section a {
+  font-size: 1rem;
+  margin: 5px 0;
+  text-decoration: none;
+  color: white;
+}
+
+.footer-section a:hover {
+  color: #ddd;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 10px 0;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .footer-section h2 {
+    font-size: 1.3rem;
+  }
+}
+
 
       @media (max-width: 768px) {
         .cart-item {
@@ -177,6 +227,14 @@
         <a href="paymentmethod.html" button  class="checkout-btn" > Proceed to Checkout</a>
       </div>
     </section>
+    <div class="footer-section quick-links">
+      <ul>
+        <li><a href="Tech Store.html">Home</a></li>
+        <li><a href="productsection.html">Products</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+      </ul>
+    </div>
 
     <script>
       function increaseQuantity(button) {
