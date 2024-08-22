@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>brotherprinter</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #8d8ad4;
+      }
+      h2{
+        color: rgb(0, 0, 0);
+      }
+      h3{
+        color: #666;
+        text-decoration: line-through;
+      }
+      .product-container {
+        max-width: 800px;
+        margin: 50px auto;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .product-image img {
+        max-width: 100%;
+        border-radius: 10px;
+        animation: slideInLeft 1.2s ease-in-out;
+      }
+
+      .product-details {
+        flex: 1;
+        margin-left: 30px;
+        animation: slideInRight 1.2s ease-in-out;
+      }
+
+      .product-details h2 {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .product-description {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .product-buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .buy-now {
+        background-color: #28a745;
+        color: #ffffff;
+      }
+
+      .add-to-cart {
+        background-color: #007bff;
+        color: #ffffff;
+      }
+
+      .btn:hover {
+        transform: scale(1.05);
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInLeft {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInRight {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product-container">
+      <div class="product-image">
+        <img
+          src="https://www.olizstore.com/media/catalog/product/cache/a04ec30316eb04ee0a0c68cae51f73f4/m/b/mbp14-spacegray-select-202110_1.jpeg"
+          alt="Macbook pro14.2 M1 Spacegray"
+        />
+      </div>
+      <div class="product-details">
+        <h2>Macbook pro14.2 M1 Spacegray</h2>
+        <p class="product-description">
+          The Apple MacBook Pro 14.2", available at the best price in Nepal at
+          Oliz Store, is a powerhouse laptop featuring a 10-core CPU and a
+          16-core GPU, both driven by the advanced Apple M1 Pro 10-Core Chip. It
+          comes with 16GB of unified RAM and a spacious 1TB SSD. The 14.2" Liquid
+          Retina XDR display, with a resolution of 3024 x 1964, provides
+          exceptional visual clarity and color accuracy.
+        </p>
+        <h3>Rs470,000.00</h3>
+        <h2>Rs270,000.00</h2>
+        <div class="product-buttons">
+          <button class="btn buy-now">Buy Now</button>
+          <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector(".buy-now").addEventListener("click", function () {
+        alert("You clicked Buy Now!");
+      });
+
+      document
+        .querySelector(".add-to-cart")
+        .addEventListener("click", function () {
+          alert("Item added to cart!");
+        });
+    </script>
+  </body>
+</html>
