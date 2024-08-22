@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Watch Ultra 2 49mm Titanium Ocean Band</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ccaf81;
+      }
+      .product-container {
+        max-width: 800px;
+        margin: 50px auto;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .product-image img {
+        max-width: 100%;
+        border-radius: 10px;
+        animation: slideInLeft 1.2s ease-in-out;
+      }
+
+      .product-details {
+        flex: 1;
+        margin-left: 30px;
+        animation: slideInRight 1.2s ease-in-out;
+      }
+
+      .product-details h2 {
+        margin: 0;
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .product-description {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .product-buttons {
+        display: flex;
+        gap: 15px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
+
+      .buy-now {
+        background-color: #28a745;
+        color: #ffffff;
+      }
+
+      .add-to-cart {
+        background-color: #007bff;
+        color: #ffffff;
+      }
+
+      .btn:hover {
+        transform: scale(1.05);
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideInLeft {
+        0% {
+          transform: translateX(-100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInRight {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product-container">
+      <div class="product-image">
+        <img
+          src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ultra-band-unselect-gallery-1-202309_FMT_WHH?wid=752&hei=720&fmt=p-jpg&qlt=80&.v=1693544486108"
+          alt="applewatchultra2"
+        />
+      </div>
+      <div class="product-details">
+        <h2>Apple Watch Ultra 2 49mm Titanium Ocean Band</h2>
+        <p class="product-description">
+          The Apple Watch Ultra 2 49mm Titanium Ocean Band is now available at
+          the best price in Nepal Tech Store. Crafted with aerospace-grade
+          titanium, this watch boasts durability and a sleek design. Featuring
+          an Always-On Retina LTPO OLED display with a flat sapphire crystal, it
+          offers clear visibility and protection against scratches.
+        </p>
+        <h2>Rs1,48,000.00</h2>
+        <div class="product-buttons">
+          <button class="btn buy-now">Buy Now</button>
+          <button class="btn add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector(".buy-now").addEventListener("click", function () {
+        alert("You clicked Buy Now!");
+      });
+
+      document
+        .querySelector(".add-to-cart")
+        .addEventListener("click", function () {
+          alert("Item added to cart!");
+        });
+    </script>
+  </body>
+</html>
