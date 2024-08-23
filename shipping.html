@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping & Payment Page</title>
+    
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+        /* Base styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #83a4d4, #b6fbff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+ a{
+    background: #4CAF50;
+    color: white;
+    padding: 5px ;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    text-decoration: none;
+}
+
+a:hover {
+    background: #80dd7cb9;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    input {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Shipping & Payment</h1>
+
+        <form id="shippingForm">
+            <div class="section">
+                <h2>Shipping Details</h2>
+                <input type="text" placeholder="Full Name" required>
+                <input type="text" placeholder="Address" required>
+                <input type="text" placeholder="City" required>
+                <input type="text" placeholder="Postal Code" required>
+                <input type="text" placeholder="Famous place nearby your home" required>
+            </div>
+
+            <a href="paymentmethod.html" type="submit">Review & Payment</a>
+        </form>
+
+        <div id="confirmation" class="hidden">
+            <h2>Thank you for your order!</h2>
+            <p>Your order has been placed successfully.</p>
+            <button onclick="restartForm()">Place Another Order</button>
+        </div>
+    </div>
+
+    <script>
+     const form = document.getElementById('shippingForm');
+const confirmation = document.getElementById('confirmation');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Simple form validation
+    const inputs = form.querySelectorAll('input');
+    let valid = true;
+
+    inputs.forEach(input => {
+        if (input.value.trim() === '') {
+            valid = false;
+            input.style.border = '1px solid red';
+        } else {
+            input.style.border = '1px solid #ccc';
+        }
+    });
+
+    if (valid) {
+        form.style.display = 'none';
+        confirmation.classList.remove('hidden');
+    }
+});
+
+function restartForm() {
+    form.reset();
+    form.style.display = 'block';
+    confirmation.classList.add('hidden');
+}
+
+    </script>
+</body>
+
+</html>
